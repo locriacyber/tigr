@@ -45,6 +45,7 @@ typedef struct {
 #define TIGR_RETINA     16  // enable retina support on OS X
 #define TIGR_NOCURSOR   32  // hide cursor
 #define TIGR_FULLSCREEN 64  // start in full-screen mode
+#define TIGR_NORESIZE   128 // disable window resizing
 
 // A Tigr bitmap.
 typedef struct Tigr {

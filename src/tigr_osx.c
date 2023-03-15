@@ -270,6 +270,10 @@ Tigr* tigrWindow(int w, int h, const char* title, int flags) {
 
     NSUInteger windowStyleMask = NSWindowStyleRegular & ~NSWindowStyleMaskMiniaturizable;
 
+    if ((flags & TIGR_NORESIZE) != 0) {
+        windowStyleMask &= ~NSWindowStyleMaskResizable;
+    }
+
     // In AUTO mode, window follows requested size, unless downscaled by tigrEnforceScale below.
     int windowScale = 1;
 
